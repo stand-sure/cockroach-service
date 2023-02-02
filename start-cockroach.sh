@@ -20,11 +20,11 @@ start()
     cockroach start --certs-dir=$CERT_DIR --store=node2 --listen-addr=$HOST2 --http-addr=$HOST2_HTTP --join=$HOST1,$HOST2,$HOST3 --background
     cockroach start --certs-dir=$CERT_DIR --store=node3 --listen-addr=$HOST3 --http-addr=$HOST3_HTTP --join=$HOST1,$HOST2,$HOST3 --background
 
-    cockroach init --certs-dir=$CERT_DIR --host=$HOST1
+#    cockroach init --certs-dir=$CERT_DIR --host=$HOST1
 
-    grep 'node starting' node1/logs/cockroach.log -A 11
-    grep 'node starting' node2/logs/cockroach.log -A 11
-    grep 'node starting' node3/logs/cockroach.log -A 11
+    # grep 'node starting' node1/logs/cockroach.log -A 11
+    # grep 'node starting' node2/logs/cockroach.log -A 11
+    # grep 'node starting' node3/logs/cockroach.log -A 11
 }
 
 start
