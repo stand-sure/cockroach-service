@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -x
 
 CERT_DIR="certs"
 
@@ -22,9 +22,9 @@ start()
 
 #    cockroach init --certs-dir=$CERT_DIR --host=$HOST1
 
-    # grep 'node starting' node1/logs/cockroach.log -A 11
-    # grep 'node starting' node2/logs/cockroach.log -A 11
-    # grep 'node starting' node3/logs/cockroach.log -A 11
+    grep 'node starting' node1/logs/cockroach.log -A 11
+    grep 'node starting' node2/logs/cockroach.log -A 11
+    grep 'node starting' node3/logs/cockroach.log -A 11
 }
 
 start
